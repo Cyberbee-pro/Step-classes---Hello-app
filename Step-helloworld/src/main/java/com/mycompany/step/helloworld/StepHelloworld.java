@@ -13,12 +13,27 @@ import java.util.*;
 public class StepHelloworld {
     final static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        String name = new String();
-        String dispName = new String();
-        System.out.println("Enter your name : ");
-        name = sc.nextLine();
-        System.out.print("Hello ");
-        dispName = name.isEmpty()?"world":name;
-        System.out.print(dispName);
+        int pplCount=0,i=0;
+        System.out.println("Enter number of people: ");
+        pplCount = sc.nextInt();
+
+        sc.nextLine();//clear buffer
+
+        String[] names= new String[pplCount];
+        for(i=0;i<pplCount;i++){
+            System.out.println("Enter your name : ");
+            names[i] = sc.nextLine();
+        }
+
+        if(pplCount>0){
+        for(i=0;i<pplCount;i++){
+            System.out.print("Hello ");
+            System.out.println(names[i]);
+        }
+    }else{
+            System.out.print("Hello World");
+    }
+        
+
     }
 }
