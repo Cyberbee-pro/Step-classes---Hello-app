@@ -14,9 +14,11 @@ public class StepHelloworld {
     final static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         String name = new String();
+        String dispName = new String();
         System.out.println("Enter your name : ");
         name = sc.nextLine();
         System.out.print("Hello ");
-        System.out.print(name);
+        dispName = name.isEmpty()?"world":name;
+        System.out.print(dispName);
     }
 }
